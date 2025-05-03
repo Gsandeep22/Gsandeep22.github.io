@@ -1,1 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Face Detection System – Rivier University</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link 
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" 
+    rel="stylesheet"
+  >
+  <style>
+    body {
+      padding-top: 50px;
+      background-color: #f8f9fa;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+    .container {
+      max-width: 960px;
+    }
+    .output-img {
+      width: 100%;
+      border: 2px solid #333;
+      border-radius: 10px;
+    }
+    pre {
+      background: #f1f1f1;
+      padding: 15px;
+      border-radius: 8px;
+      white-space: pre-wrap;
+    }
+    .footer {
+      font-size: 14px;
+      text-align: center;
+      margin-top: 40px;
+      color: #666;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <h1 class="text-center mb-4">Face Detection System</h1>
+    <h5 class="text-center text-muted mb-4">Professional Seminar Course – Rivier University</h5>
+
+    <p>
+      This project introduces an intelligent face detection system that identifies and marks human faces within static images. 
+      It utilizes AI-based algorithms such as Haar Cascades and Convolutional Neural Networks (CNNs) to ensure accurate recognition, 
+      high-speed processing, and secure image handling.
+    </p>
+
+    <hr>
+
+    <h2> My Contributions</h2>
+    <ul>
+      <li>Developed the core face detection logic using Haar Cascades and CNNs.</li>
+      <li>Implemented preprocessing features including normalization, resizing, and grayscale transformation.</li>
+      <li>Designed error handling mechanisms to support invalid/corrupted image files.</li>
+      <li>Integrated performance benchmarks and multithreading for batch processing.</li>
+      <li>Ensured GDPR/CCPA compliance with encryption and secure data handling.</li>
+      <li>Built logging and reporting modules for audit-friendly traceability.</li>
+    </ul>
+
+    <hr>
+
+    <h2> Sprint Objective Summary</h2>
+    <table class="table table-bordered table-striped">
+      <thead class="table-light">
+        <tr>
+          <th>Sprint</th>
+          <th>Objective Summary</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td>Sprint 1</td><td>Image input handling and preprocessing modules setup</td></tr>
+        <tr><td>Sprint 2</td><td>Face detection pipeline using Haar/CNN</td></tr>
+        <tr><td>Sprint 3</td><td>Logging, result visualization, and UI responsiveness</td></tr>
+        <tr><td>Sprint 4</td><td>Security, error handling, and performance tuning</td></tr>
+      </tbody>
+    </table>
+
+    <hr>
+
+    <h2>📖 User Story</h2>
+    <p><strong>US-FD1: Intelligent Face Detection Implementation</strong></p>
+    <p><em>As</em> a system administrator,  
+      <br><em>I want</em> to deploy an AI-driven face detection system that identifies faces within images,  
+      <br><em>So that</em> I can automate user authentication and enhance system security.
+    </p>
+    <table class="table table-bordered table-sm">
+      <thead class="table-light">
+        <tr>
+          <th>Task</th>
+          <th>Status</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td>Image Input Handling (12 ph)</td><td> Completed</td></tr>
+        <tr><td>Implement Face Detection Module (20 ph)</td><td> Completed</td></tr>
+        <tr><td>Preprocessing Pipeline Development (16 ph)</td><td> Completed</td></tr>
+        <tr><td>Visual Bounding Box Rendering (14 ph)</td><td> Completed</td></tr>
+        <tr><td>Performance Optimization (18 ph)</td><td> Completed</td></tr>
+        <tr><td>Logging and Error Handling Mechanism (10 ph)</td><td> Completed</td></tr>
+        <tr><td>Security & GDPR Compliance Features (12 ph)</td><td> Completed</td></tr>
+        <tr><td>End-to-End System Testing and Validation (16 ph)</td><td> Completed</td></tr>
+      </tbody>
+    </table>
+
+    <hr>
+
+    <h2> System Agents</h2>
+    <table class="table table-bordered table-hover">
+      <thead class="table-light">
+        <tr>
+          <th>Agent</th>
+          <th>Role & Responsibility</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td>Image Preprocessing Agent</td><td>Converts, normalizes, and prepares image data for analysis</td></tr>
+        <tr><td>Face Detection Agent</td><td>Detects facial regions using AI models</td></tr>
+        <tr><td>Bounding Box Generation Agent</td><td>Draws rectangles around detected facial features</td></tr>
+        <tr><td>Result Analysis Agent</td><td>Summarizes face counts and inference performance</td></tr>
+        <tr><td>Logging & Reporting Agent</td><td>Maintains records of detection events and processing details</td></tr>
+        <tr><td>Error Handling Agent</td><td>Manages invalid images, exceptions, and user errors</td></tr>
+        <tr><td>Security Compliance Agent</td><td>Ensures encryption and privacy adherence to GDPR/CCPA</td></tr>
+      </tbody>
+    </table>
+
+    <hr>
+
+    <h2> Agent Workflow</h2>
+    <pre>
+1. Image Upload              →  User provides an image file.
+2. Preprocessing             →  Image is converted to grayscale, resized, and denoised.
+3. Detection                 →  Faces are localized using Haar Cascades and CNNs.
+4. Bounding Box Drawing      →  Bounding boxes are drawn around each detected face.
+5. Result Analysis           →  System summarizes detection stats.
+6. Logging & Reporting       →  Data is logged for audit and analysis.
+7. Output Display            →  UI displays annotated image and logs.
+    </pre>
+
+    <hr>
+
+    <h2> Tools & Frameworks</h2>
+    <table class="table table-bordered table-striped">
+      <thead class="table-light">
+        <tr><th>Tool / Framework</th><th>Purpose / Usage</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>OpenCV</td><td>Haar Cascade Classifiers for face detection</td></tr>
+        <tr><td>TensorFlow / Keras</td><td>Deep learning models (CNN-based face detection)</td></tr>
+        <tr><td>NumPy, Pillow</td><td>Image processing and input/output handling</td></tr>
+        <tr><td>Matplotlib</td><td>Visualization and bounding box debugging</td></tr>
+        <tr><td>Python 3.11</td><td>Core programming language</td></tr>
+        <tr><td>Jupyter / Streamlit / Panel</td><td>UI development and interactive image display</td></tr>
+      </tbody>
+    </table>
+
+    <hr>
+
+    <h2> Output</h2>
+    <p>Below is the result of the face detection system applied to a sample image:</p>
+    <img src="output.png" alt="Face Detection Output" class="output-img mb-4">
+
+    <hr>
+
+    <h2> Results</h2>
+    <p>Face detection tested across various images with successful bounding box recognition. Evaluation metrics and logs are available in the repository.</p>
+
+    <hr>
+
+    <h2> Conclusion</h2>
+    <p>
+      The <strong>Face Detection System</strong> is a robust, privacy-compliant, and performance-optimized solution for detecting human faces in static images. 
+      By integrating advanced AI models (Haar Cascades, CNNs) with secure logging and visualization capabilities, 
+      the system enhances user authentication and security operations.
+    </p>
+    <ul>
+      <li>High accuracy across diverse datasets.</li>
+      <li>Real-time face detection within 2 seconds per image.</li>
+      <li>Seamless handling of multiple image formats.</li>
+      <li>End-to-end pipeline including preprocessing, detection, visualization, and reporting.</li>
+      <li>Full GDPR/CCPA compliance through encryption and data handling protocols.</li>
+    </ul>
+
+    <div class="footer">
+      &copy; 2025 Face Detection Project | Developed for Rivier University
+    </div>
+  </div>
+
+</body>
+</html>
 
